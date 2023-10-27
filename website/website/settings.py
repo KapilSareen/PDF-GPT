@@ -124,4 +124,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-GPT3_API_KEY = 'your_api_key_here'
+GPT3_API_KEY = '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'

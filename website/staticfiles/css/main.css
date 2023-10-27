@@ -1,0 +1,73 @@
+/* #d1{
+    width: 4vh;
+    border: 2px solid black;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+*{
+    overflow: hidden auto;
+}
+ul {
+    list-style-type: none;
+    margin: 2px;
+    padding:2px ;
+    overflow: hidden;
+    
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(70, 35, 35);
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+  }
+  
+  li a:hover {
+    background-color:rgb(58, 203, 251);
+  }
+
+
+body{
+    background-image: url(../../staticfiles/images/bg.jpeg);
+}
+#d1{
+    /* font-size: 9px; */
+    position: relative;
+    right: -214px;
+    float: left;
+    width: 50vh;
+    margin: auto;
+}
+#d2{
+    position: relative;
+    left: 492px;
+    font-family: 'Baloo Bhaina 2', sans-serif;
+    display: inline;
+    font-size: 50px;
+    width: 50vh;
+    margin: auto
+
+}
+#d3{
+    position: relative;
+    left: 848px;
+    font-family: 'Baloo Bhaina 2', sans-serif;
+    display: inline;
+    width: 50vh;
+    margin: auto;
+    top: -109px;
+
+}
+
+
+/* #d3{
+    width: 200px;
+    height: 100px;
+    border: 3px solid  ;
+} */
+
