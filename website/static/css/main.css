@@ -7,6 +7,7 @@
 *{
     overflow: hidden auto;
 }
+
 ul {
     list-style-type: none;
     margin: 2px;
@@ -20,31 +21,48 @@ ul {
   }
   
   li a {
-    display: block;
+    font-size: 20px;
+    font-weight:200 ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:grid;
     color: rgb(70, 35, 35);
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    margin-left: 40px;
     text-decoration: underline;
   }
   
   li a:hover {
-    background-color:rgb(58, 203, 251);
+    opacity: 0.6;
+    border-radius: 10px;
+    color: white;
+    background-color:rgb(11, 12, 11);
   }
 
 
 body{
-    background-image: url("/static/images/bg.jpeg");
+    background-image: url(../../staticfiles/images/bg.jpeg);
 }
-#d1{
+#d1 {
+  overflow: hidden;
+  
     /* font-size: 9px; */
+    border-radius: 45px;
+    box-shadow:  19px 20px 10px #2a2c5c;
     position: relative;
-    right: -214px;
+    right: -310px;
+    top: 32px;
     float: left;
-    width: 50vh;
+    width: 300px;
     margin: auto;
+    height: 300px;
 }
+
+
 #d2{
+    text-shadow:  10px 10px 10px #2a2c5c;
     position: relative;
+    color: aqua;
     left: 492px;
     font-family: 'Baloo Bhaina 2', sans-serif;
     display: inline;
@@ -54,8 +72,11 @@ body{
 
 }
 #d3{
+    
     position: relative;
-    left: 848px;
+    color: white;
+    font-size: larger;
+    left: 816px;
     font-family: 'Baloo Bhaina 2', sans-serif;
     display: inline;
     width: 50vh;
@@ -64,10 +85,18 @@ body{
 
 }
 
+#d_head{
 
-/* #d3{
-    width: 200px;
-    height: 100px;
-    border: 3px solid  ;
-} */
-
+    box-shadow:inset 11px 11px 14px #2a2c5c;;
+box-sizing: border-box;
+background-image: url(https://img.freepik.com/free-vector/gradient-blue-dynamic-lines-background_52683-67204.jpg);
+background-size: cover;  
+background-repeat: no-repeat;
+padding: 11px;
+    margin: 10px;
+    margin-top: 44px;
+    /* border: 2px solid rgb(137, 93, 226);
+    outline: 5px solid rgb(72, 12, 201); */
+    outline-offset: 3px;
+    border-radius: 30px;
+}
