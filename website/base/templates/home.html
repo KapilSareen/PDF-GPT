@@ -33,12 +33,14 @@
 </div>
 
 <br><br>
-    <div style="width: 800px; margin: auto;">
-        
-    
-        <button id="b1">Upload File Here</button>
-    </div>
 
+<div id="d4">
+    <input type="file" text="Upload PDF" id="pdfInput" accept=".pdf" />
+    
+    <button id="displayButton">Display PDF</button>
+    <div id="pdfContainer" style="display: none;">
+        <embed id="pdfEmbed" type="application/pdf" width="100%" height="500px" />
+    </div>
 
     <script>
         document.getElementById("displayButton").addEventListener("click", function () {
