@@ -33,7 +33,7 @@ ul {
 
 
 body{
-    background-image: url(../../staticfiles/images/bg.jpeg);
+    background-image: url("/static/images/bg.jpeg");
 }
 #d1{
     /* font-size: 9px; */
