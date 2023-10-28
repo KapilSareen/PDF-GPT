@@ -67,25 +67,68 @@
     {%csrf_token%}
     <div class="input-group">
         <input type="text" class="form-control message-input" placeholder="Type your Question">
-<div class="input-group-append">
-    <button type="submit" class="btn btn-primary btn-send">Submit</button>
-    </div>
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-primary btn-send">Submit</button>
+        </div>
+        <ul class="messages-list"></ul>
     </div>
     </form>
     </div>
 <script>
-    
 const messagesList = document.querySelector('.messages-list');
 const messageForm = document.querySelector('.message-form');
 const messageInput = document.querySelector('.message-input');
+// console.log(messageInput);
 
 messageForm.addEventListener('submit',(event) =>{
     event.preventDefault();
     const message = messageInput.value.trim();
+    messageInput.value='';
     if (message.length==0){
         return;
     }
+    const messageItem = document.createElement('li');
+    // messageItem.classlist.add('message','sent');
+    messageItem.innerHTML = `
+    <div class = "message-text">
+        <div class="message-sender">
+            <b> You </b>
+            </div>
+            <div class="message-content">
+                ${message}
+                </div>
+                </div>`;
+     messagesList.appendChild(messageItem);
+     fetch('', {
+method: 'POST',
+headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+body: new URLSearchParams ({
+'csrfmiddlewaretoken': document. querySelector(' [name=csrfmiddlewaretoken]') .value,
+'message': message
 })
+     })
+. then(response => response. json())
+. then(data => {
+const response = data. response;
+const messageItem = document. createElement('li');
+messageItem.classList.add('message', 'received');
+messageItem. innerHTML = `
+<div class="message-text">
+<div class="message-sender">
+</div>
+<div class="message-content">
+    ${response}
+    </div>
+    </div>
+    `;
+    messagesList.appendChild(messageItem);
+
+
+});
+})
+
+
 </script>
+{% endblock %}
 </body>
 </html>
