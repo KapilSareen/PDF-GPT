@@ -58,7 +58,32 @@
                 alert("Please select a PDF file first.");
             }
         });
-    </script>
-</div>    
+        </script>
+        </div>
+<br><br>
+<form class="message-form">
+    {%csrf_token%}
+    <div class="input-group">
+        <input type="text" class="form-control message-input" placeholder="Type your Question">
+<div class="input-group-append">
+    <button type="submit" class="btn btn-primary btn-send">Submit</button>
+    </div>
+    </div>
+    </form>
+    </div>
+<script>
+    
+const messagesList = document.querySelector('.messages-list');
+const messageForm = document.querySelector('.message-form');
+const messageInput = document.querySelector('.message-input');
+
+messageForm.addEventListener('submit',(event) =>{
+    event.preventDefault();
+    const message = messageInput.value.trim();
+    if (message.length==0){
+        return;
+    }
+})
+</script>
 </body>
 </html>
