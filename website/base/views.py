@@ -6,6 +6,7 @@ from gpt_integration.forms import PdfUploadForm
 from .models import ExtractedText
 from PyPDF2 import PdfFileReader
 import requests
+from flask import Flask,jsonify
 
 import openai
 
@@ -87,3 +88,13 @@ def extract_pdf_and_send_to_api(request):
     else:
         form = PdfUploadForm()
     return render(request, 'upload_form.html', {'form': form})
+
+
+app = Flask(__name__)
+
+@app.route('/get_text', methods=['GET'])
+def get_text():
+    return jsonify({"text": extracted_text})
+
+if __name__ == "__main__":
+    app.run()    
