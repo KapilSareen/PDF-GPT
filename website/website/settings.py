@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base'
+    'base',
+    'gpt_integration'
 ]
 
 MIDDLEWARE = [
@@ -130,4 +131,4 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-GPT3_API_KEY = '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'
+GPT3_API_KEY = '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'
